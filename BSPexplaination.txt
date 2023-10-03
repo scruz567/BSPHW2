@@ -1,0 +1,9 @@
+bsp.py
+
+Main includes pre-determined line segments that represent the figure 2D figure. Each Line Segment is made up of two values, the Start point and the End point.
+
+The build_bsp_tree function takes two inputs, a list of segments and a single segment. During the first call, the user-selected segment will be selected as the first segment to be split (split_segment). The first Node is then created (root Node), with its 'segment' value being set to the split_segment.
+
+In the same function, for each segment in the list of segments, if it is in front of the current segment (split_segment), it will be appended to a list of all front segments. If it is behind the current segment, it will be added to list of front segments. After the loop, the build_bsp_tree function will be recursively called for the list of front segments and the list of back segments until both lists are empty and the root Node front values and back values are complete.
+
+The in_order_traversal function's purpose is to print out the in-order traversal of the tree. This function visits the nodes in ascending order. It first visits the left subtree, then the current node, and finally the right subtree.
